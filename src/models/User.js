@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { Ngo } from "./Ngo.js";
 import { ObjectId } from "mongodb";
 
 export const User = mongoose.model('user', new mongoose.Schema({
