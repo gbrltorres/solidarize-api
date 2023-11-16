@@ -1,10 +1,11 @@
 import { Ngo } from '../models/Ngo.js';
+import bcrypt from 'bcrypt';
 import userRepository from '../repositories/userRepository.js'
 import userValidationSchema from './validators/userValidator.js';
 
 export const createUser = async (userData) => {
     try {
-        const errorResponse = await validateUserData(userData)
+        const errorResponse = await validateUserData(userData);
         if (errorResponse) {
             return errorResponse;
         }
@@ -13,11 +14,19 @@ export const createUser = async (userData) => {
             userData.ngo = new Ngo();
         }
 
+        const encryptedPassword = await encryptPassword(userData.password);
+        userData.password = encryptedPassword;
+        
         await userRepository.create(userData);
         return { message: 'Usuário criado com sucesso.', status: 200 };
     } catch (ex) {
         return { message: ex.message, status: 502 };
     }
+};
+
+const encryptPassword = async (password) => {
+    const salt = await bcrypt.genSalt(12);
+    return await bcrypt.hash(password, salt);
 };
 
 const validateUserData = async (userData) => {

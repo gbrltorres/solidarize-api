@@ -1,4 +1,9 @@
 import userRepository from "../../repositories/userRepository.js";
+import bcrypt from "bcrypt";
+
+async function verifyPassword(requestPassword, storedPassword) {
+    return await bcrypt.compare(requestPassword, storedPassword);;
+}
 
 export const login = async (req, res) => {
     try {
@@ -9,9 +14,13 @@ export const login = async (req, res) => {
         }
 
         const user = await userRepository.findByEmail(email);
-
         if (!user) {
             return res.status(404).json({ message: 'Nenhum cadastro foi encontrado com o e-mail fornecido' })
+        }
+
+        const isPasswordValid = await verifyPassword(password, user.password);
+        if (!isPasswordValid) {
+            return res.status(400).json({ message: 'Credenciais do usuário não estão corretas.'})
         }
 
         req.session.email = { userEmail: email };
