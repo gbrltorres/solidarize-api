@@ -1,10 +1,8 @@
-import * as userServices from '../services/userServices.js'
+import * as userServices from '../../services/userService.js'
 
 export const createUser = async (req, res) => {
     try {
         const userInfo = req.body;
-        console.log('req', req.body);
-
         await userServices.createUser(userInfo);
         res.status(201).json();
     } catch (error) {

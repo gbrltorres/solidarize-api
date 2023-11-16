@@ -1,6 +1,7 @@
-import { User } from "../entities/User.js";
+import { User } from "../models/User.js";
 
 export const createUser = (user) => {
+    
     return User.create(user)
 }
 
