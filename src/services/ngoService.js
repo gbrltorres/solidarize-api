@@ -10,6 +10,11 @@ export const createNgo = async (ngoData, userEmail) => {
             return errorResponse;
         }
         
+        const user = await userRepository.findByEmail(userEmail);
+        if (user.ngo) {
+            return { message: 'O usuário já possui ONG cadastrada.', status: 400 };
+        }
+
         const ngo = await ngoRepository.create(ngoData);
         await userRepository.updateUserNgo(userEmail, ngo);
 
@@ -21,6 +26,11 @@ export const createNgo = async (ngoData, userEmail) => {
 
 export const updateNgo = async (ngoData) => {
     try {
+        const ngo = await ngoRepository.findByCode(ngoData.code);
+        if (!ngo) {
+            return { message: 'ONG não encontrada.', status: 404 };
+        }
+
         const errorResponse = await validateNgoData(ngoData, ngoData.code);
         if (errorResponse) {
             return errorResponse;
@@ -33,9 +43,14 @@ export const updateNgo = async (ngoData) => {
     }
 };
 
-export const deleteNgo = async (ngoData) => {
+export const deleteNgo = async (ngoCode) => {
     try {
-        await ngoRepository.remove(ngoData.code);
+        const ngo = await ngoRepository.findByCode(ngoCode);
+        if (!ngo) {
+            return { message: 'ONG não encontrada.', status: 404 };
+        }
+
+        await ngoRepository.remove(ngoCode);
         return { message: 'ONG removida com sucesso.', status: 200 };
     } catch (ex) {
         return { message: ex.message, status: 502 };
