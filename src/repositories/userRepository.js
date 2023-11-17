@@ -9,7 +9,15 @@ const findByEmail = async (userEmail) => {
     return await User.findOne({ email: userEmail });
 };
 
+const updateUserNgo = async (userEmail, ngo) => {
+    const query = { email: userEmail };
+    const update = { ngo };
+
+    await User.findOneAndUpdate(query, update, { new: true });
+};
+
 export default {
     create,
-    findByEmail
+    findByEmail,
+    updateUserNgo
 };

@@ -9,10 +9,8 @@ export const createNgo = async (ngoData, userEmail) => {
             return errorResponse;
         }
         
-        const user = await userRepository.findByEmail(userEmail);
         const ngo = await ngoRepository.create(ngoData);
-
-        user.ngo = ngo;
+        await userRepository.updateUserNgo(userEmail, ngo);
 
         return { message: 'ONG cadastrada com sucesso.', status: 200 };
     } catch (ex) {
