@@ -19,27 +19,42 @@ export const createNgo = async (ngoData, userEmail) => {
     }
 };
 
-const validateNgoData = async (ngoData) => {
-    const { error } = ngoValidationSchema.validate(ngoData);
+export const updateNgo = async (ngoData) => {
+    try {
+        const errorResponse = await validateNgoData(ngoData, ngoData.code);
+        if (errorResponse) {
+            return errorResponse;
+        }
+        
+        await ngoRepository.update(ngoData);
+        return { message: 'ONG editada com sucesso.', status: 200 };
+    } catch (ex) {
+        return { message: ex.message, status: 502 };
+    }
+};
+
+const validateNgoData = async (ngoData, currentCode = null) => {
+    const { error } = ngoValidationSchema.validate(ngoData, { abortEarly: false });
     if (error) {
-        return { message: error.details[0].message, status: 400 };
+        return { message: error.details.map(detail => detail.message).join(', '), status: 400 };
     }
 
     if (!cnpj.isValid(ngoData.code)) {
         return { message: 'O CNPJ fornecido não é válido.', status: 400 };
-    } 
+    }
 
     const phoneNumberExists = await ngoRepository.findByPhoneNumber(ngoData.phoneNumber);
-    if (phoneNumberExists) {
+    if (phoneNumberExists && phoneNumberExists.code !== currentCode) {
         return { message: 'Já existe uma ONG registrada com esse celular.', status: 400 };
     }
 
     const ngoExists = await ngoRepository.findByCode(ngoData.code);
-    if (ngoExists) {
+    if (ngoExists && ngoExists.code !== currentCode) {
         return { message: 'Já existe uma ONG registrada com esse CNPJ.', status: 400 };
     }
 };
 
 export default {
-    createNgo
+    createNgo,
+    updateNgo
 };

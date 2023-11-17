@@ -14,8 +14,17 @@ const findByPhoneNumber = async (phoneNumber) => {
     return await Ngo.findOne({ phoneNumber: phoneNumber });
 };
 
+const update = async (ngoData) => {
+    await Ngo.findOneAndUpdate(
+        { code: ngoData.code },
+        { $set: ngoData },
+        { new: true }
+    );
+};
+
 export default {
     create,
     findByCode,
-    findByPhoneNumber
+    findByPhoneNumber,
+    update
 };
