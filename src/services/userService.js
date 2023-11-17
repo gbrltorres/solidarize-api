@@ -10,10 +10,6 @@ export const createUser = async (userData) => {
             return errorResponse;
         }
 
-        if (userData.isManager) {
-            userData.ngo = new Ngo();
-        }
-
         const encryptedPassword = await encryptPassword(userData.password);
         userData.password = encryptedPassword;
         

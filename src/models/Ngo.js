@@ -1,19 +1,15 @@
 import mongoose from "mongoose";
 
 export const Ngo = mongoose.model('ngo', new mongoose.Schema({
-    orgName: {
+    name: {
         type: String,
         required: true
     },
-    orgCode: {
+    code: {
         type: String,
         required: true
     },
-    orgPhoneNumber: {
-        type: String,
-        required: true
-    },
-    orgPassword: {
+    phoneNumber: {
         type: String,
         required: true
     },
