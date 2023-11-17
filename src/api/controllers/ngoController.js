@@ -12,3 +12,9 @@ export const updateNgo = async (req, res) => {
     const response = await ngoService.updateNgo(ngoData);
     res.status(response.status).json({ message: response.message });
 }
+
+export const deleteNgo = async (req, res) => {
+    const ngoData = req.body;
+    const response = await ngoService.deleteNgo(ngoData);
+    res.status(response.status).json({ message: response.message });
+}

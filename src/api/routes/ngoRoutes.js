@@ -7,4 +7,6 @@ Ngo.post('/register', ngoController.createNgo)
 
 Ngo.post('/update', ngoController.updateNgo)
 
+Ngo.post('/delete', ngoController.deleteNgo)
+
 export default Ngo;

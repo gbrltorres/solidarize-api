@@ -22,9 +22,15 @@ const update = async (ngoData) => {
     );
 };
 
+const remove = async (ngoCode) => {
+    const query = { code: ngoCode };
+    await Ngo.findOneAndDelete(query);
+};
+
 export default {
     create,
     findByCode,
     findByPhoneNumber,
-    update
+    update,
+    remove
 };

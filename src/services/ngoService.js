@@ -33,6 +33,15 @@ export const updateNgo = async (ngoData) => {
     }
 };
 
+export const deleteNgo = async (ngoData) => {
+    try {
+        await ngoRepository.remove(ngoData.code);
+        return { message: 'ONG removida com sucesso.', status: 200 };
+    } catch (ex) {
+        return { message: ex.message, status: 502 };
+    }
+};
+
 const validateNgoData = async (ngoData, currentCode = null) => {
     const { error } = ngoValidationSchema.validate(ngoData, { abortEarly: false });
     if (error) {
