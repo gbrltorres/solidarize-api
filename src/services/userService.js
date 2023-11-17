@@ -1,4 +1,3 @@
-import { Ngo } from '../models/Ngo.js';
 import bcrypt from 'bcrypt';
 import userRepository from '../repositories/userRepository.js'
 import userValidationSchema from './validators/userValidator.js';
