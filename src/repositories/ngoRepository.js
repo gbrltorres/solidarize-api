@@ -10,7 +10,12 @@ const findByCode = async (ngoCode) => {
     return await Ngo.findOne({ code: ngoCode });
 };
 
+const findByPhoneNumber = async (phoneNumber) => {
+    return await Ngo.findOne({ phoneNumber: phoneNumber });
+};
+
 export default {
     create,
-    findByCode
+    findByCode,
+    findByPhoneNumber
 };
