@@ -19,6 +19,19 @@ export const createUser = async (userData) => {
     }
 };
 
+export const checkUser = async (userData) => {
+    try {
+        const user = await userRepository.findByEmail(userData.email);
+        if (user) {
+            return { message: 'Usuário encontrado.', status: 200 };
+        } else {
+            return { message: 'Usuário não encontrado.', status: 404 };
+        }
+    } catch (ex) {
+        return { message: ex.message, status: 502 };
+    }
+};
+
 const encryptPassword = async (password) => {
     const salt = await bcrypt.genSalt(12);
     return await bcrypt.hash(password, salt);

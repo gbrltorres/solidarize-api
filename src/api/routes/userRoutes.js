@@ -5,4 +5,6 @@ const User = Router()
 
 User.post('/register', userController.createUser)
 
+User.get('/check-user', userController.checkUser)
+
 export default User;
