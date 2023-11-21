@@ -6,6 +6,4 @@ const router = Router();
 
 router.use(isAuthenticated);
 
-router.use('/ong', ngoRoutes);
-
 export default router;

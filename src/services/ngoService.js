@@ -24,6 +24,33 @@ export const createNgo = async (ngoData, userEmail) => {
     }
 };
 
+export const checkNgoByCnpj = async (ngoData) => {
+    try {
+        const ngo = await ngoRepository.findByCode(ngoData.cnpj);
+        if (ngo) {
+            return { message: 'ONG encontrada.', status: 200 };
+        } else {
+            return { message: 'ONG não encontrada.', status: 404 };
+        }
+    } catch (ex) {
+        return { message: ex.message, status: 502 };
+    }
+};
+
+export const checkNgoByPhoneNumber = async (ngoData) => {
+    try {
+        console.log('service data', ngoData);
+        const ngo = await ngoRepository.findByPhoneNumber(ngoData.phoneNumber);
+        if (ngo) {
+            return { message: 'ONG encontrada.', status: 200 };
+        } else {
+            return { message: 'ONG não encontrada.', status: 404 };
+        }
+    } catch (ex) {
+        return { message: ex.message, status: 502 };
+    }
+};
+
 export const updateNgo = async (ngoData) => {
     try {
         const ngo = await ngoRepository.findByCode(ngoData.code);

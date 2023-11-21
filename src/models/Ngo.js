@@ -13,6 +13,10 @@ export const Ngo = mongoose.model('ngo', new mongoose.Schema({
         type: String,
         required: true
     },
+    description: {
+        type: String,
+        required: true
+    },
     interests: {
         type: Array,
         required: true
