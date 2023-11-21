@@ -80,6 +80,10 @@ export const deleteNgo = async (ngoCode) => {
 };
 
 const validateNgoData = async (ngoData, currentCode = null) => {
+    if (!ngoData.email) {
+        return { message: 'O e-mail não foi fornecido.', status: 400 };
+    }
+
     delete ngoData.email;
 
     const { error } = ngoValidationSchema.validate(ngoData, { abortEarly: false });
