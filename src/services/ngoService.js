@@ -3,16 +3,12 @@ import userRepository from '../repositories/userRepository.js';
 import ngoValidationSchema from './validators/ngoValidator.js';
 import { cnpj } from 'cpf-cnpj-validator';
 
-export const createNgo = async (ngoData, userEmail) => {
+export const createNgo = async (ngoData) => {
     try {
+        const userEmail = ngoData.email;
         const errorResponse = await validateNgoData(ngoData);
         if (errorResponse) {
             return errorResponse;
-        }
-        
-        const user = await userRepository.findByEmail(userEmail);
-        if (user.ngo) {
-            return { message: 'O usuário já possui ONG cadastrada.', status: 400 };
         }
 
         const ngo = await ngoRepository.create(ngoData);
@@ -39,7 +35,6 @@ export const checkNgoByCnpj = async (ngoData) => {
 
 export const checkNgoByPhoneNumber = async (ngoData) => {
     try {
-        console.log('service data', ngoData);
         const ngo = await ngoRepository.findByPhoneNumber(ngoData.phoneNumber);
         if (ngo) {
             return { message: 'ONG encontrada.', status: 200 };
@@ -85,6 +80,8 @@ export const deleteNgo = async (ngoCode) => {
 };
 
 const validateNgoData = async (ngoData, currentCode = null) => {
+    delete ngoData.email;
+
     const { error } = ngoValidationSchema.validate(ngoData, { abortEarly: false });
     if (error) {
         return { message: error.details.map(detail => detail.message).join(', '), status: 400 };
@@ -99,8 +96,8 @@ const validateNgoData = async (ngoData, currentCode = null) => {
         return { message: 'Já existe uma ONG registrada com esse celular.', status: 400 };
     }
 
-    const ngoExists = await ngoRepository.findByCode(ngoData.code);
-    if (ngoExists && ngoExists.code !== currentCode) {
+    const ngoCodeExists = await ngoRepository.findByCode(ngoData.code);
+    if (ngoCodeExists && ngoCodeExists.code !== currentCode) {
         return { message: 'Já existe uma ONG registrada com esse CNPJ.', status: 400 };
     }
 };
