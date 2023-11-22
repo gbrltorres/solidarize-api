@@ -1,24 +1,25 @@
 import userRepository from '../repositories/userRepository.js';
+import bcrypt from "bcrypt";
+import jwt from 'jsonwebtoken';
 
 export const login = async (requestData) => {
-    const { userEmail, password } = requestData;
-
-    if (!userEmail || !password) {
-        return res.status(400).json({ message: 'Há campos que não foram preenchidos.'})
-    }
-
-    const user = await userRepository.findByEmail(userEmail);
-
-    if (!user) {
-        return res.status(404).json({ message: 'Nenhum cadastro foi encontrado com o e-mail fornecido' })
-    }
-
-    const isPasswordValid = await bcrypt.compare(password, user.password)
-    if (!isPasswordValid) {
-        return res.status(401).json({ message: 'Senha inválida.' })
-    }
-
     try {
+        const { email, password } = requestData;
+
+        if (!email || !password) {
+            return { message: 'Há campos que não foram preenchidos.', status: 400 };
+        }
+
+        const user = await userRepository.findByEmail(email);
+
+        if (!user) {
+            return { message: 'Nenhum cadastro foi encontrado com o e-mail fornecido.', status: 404 };
+        }
+
+        const isPasswordValid = await bcrypt.compare(password, user.password)
+        if (!isPasswordValid) {
+            return { message: 'Senha inválida.', status: 401 };
+        }
         const secret = process.env.SECRET
         const token = jwt.sign(
             {
@@ -27,9 +28,9 @@ export const login = async (requestData) => {
             secret,
         )
 
-        res.status(200).json({ message: "Login realizado com sucesso.", token })
+        return { message: 'Login realizado com sucesso.', status: 200, token: token };
     } catch (error) {
-        return res.status(500).json({ message: error })
+        return { message: error, status: 500 };
     }
 };
 
