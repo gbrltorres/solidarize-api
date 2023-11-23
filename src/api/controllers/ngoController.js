@@ -15,7 +15,7 @@ export const checkNgoByCnpj = async (req, res) => {
 export const checkNgoById = async (req, res) => {
     const ngoData = req.query;
     const response = await ngoService.checkNgoById(ngoData);
-    res.status(response.status).json({ message: response.message });
+    res.status(response.status).json(response);
 }
 
 export const checkNgoByPhoneNumber = async (req, res) => {

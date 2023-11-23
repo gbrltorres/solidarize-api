@@ -9,6 +9,5 @@ export const createUser = async (req, res) => {
 export const checkUser = async (req, res) => {
     const userData = req.query;
     const response = await userService.checkUser(userData);
-    console.log('resposta', response);
     res.status(response.status).json(response);
 }

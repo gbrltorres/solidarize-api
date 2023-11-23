@@ -38,7 +38,7 @@ export const checkNgoById = async (ngoData) => {
         const ngoId = ngoData.id;
         const ngo = await ngoRepository.findById(ngoId);
         if (ngo) {
-            return { message: 'ONG encontrada.', status: 200 };
+            return { message: 'ONG encontrada.', status: 200, ngo: ngo };
         } else {
             return { message: 'ONG não encontrada.', status: 404 };
         }
