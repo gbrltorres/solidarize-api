@@ -67,17 +67,13 @@ export const updateNgo = async (ngoData) => {
         if (!ngo) {
             return { message: 'ONG não encontrada.', status: 404 };
         }
-        
-        const ngoId = ngoData._id;
-        delete ngoData._id;
-        delete ngoData.__v;
 
         const errorResponse = await validateNgoData(ngoData, ngoData.code, true);
         if (errorResponse) {
             return errorResponse;
         }
-
-        await ngoRepository.update(ngoData, ngoId);
+        
+        await ngoRepository.update(ngoData);
         logger.info('ONG editada com sucesso.');
         return { message: 'ONG editada com sucesso.', status: 200 };
     } catch (ex) {
