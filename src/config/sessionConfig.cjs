@@ -5,6 +5,7 @@ const redisClient = redis.createClient({
     port: 6379
 });
 
+redisClient.on('error', (err) => console.log('Redis Client Error', err));
 redisClient.connect().catch(console.error);
 
 let redisStore = new RedisStore({
@@ -12,6 +13,7 @@ let redisStore = new RedisStore({
 });
 
 const sessionConfig = {
+    store: redisStore,
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
@@ -20,7 +22,6 @@ const sessionConfig = {
         secure: false,
         maxAge: 1000 * 60 * 60 * 24
     },
-    store: redisStore
 };
 
 module.exports = sessionConfig;

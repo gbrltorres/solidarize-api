@@ -10,5 +10,5 @@ export const authenticateUser = async (req, res) => {
 
 export const logout = (req, res) => {
     req.session.destroy();
-    res.send('Usuário foi deslogado.');
+    res.status(200).send('Usuário foi deslogado.');
 };

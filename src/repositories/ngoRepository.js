@@ -19,9 +19,9 @@ const findByPhoneNumber = async (phoneNumber) => {
     return await Ngo.findOne({ phoneNumber: phoneNumber });
 };
 
-const update = async (ngoData) => {
-    await Ngo.findOneAndUpdate(
-        { code: ngoData.code },
+const update = async (ngoData, ngoId) => {
+    await Ngo.findByIdAndUpdate(
+        ngoId,
         { $set: ngoData },
         { new: true }
     );

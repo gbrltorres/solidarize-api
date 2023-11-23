@@ -1,14 +1,21 @@
+import jwt from 'jsonwebtoken';
+
 function isAuthenticated(req, res, next) {
-    const sessionToken = req.session.token;
-    const headerToken = req.headers['authorization'] ? req.headers['authorization'].split(' ')[1] : null;
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1];
 
-    if (!sessionToken || !headerToken) {
-        return res.status(401).send('Usuário não autenticado.');
-    }
+    if (token == null) return res.sendStatus(401);
 
-    if (tokenSessao === tokenHeader) {
-        return next();
-    }
+    verifyToken(token, (err, user) => {
+        if (err) return res.sendStatus(403);
+
+        req.user = user;
+        next();
+    });
+}
+
+function verifyToken(token, callback) {
+    jwt.verify(token, process.env.SECRET, callback);
 }
 
 export default isAuthenticated;

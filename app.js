@@ -12,7 +12,10 @@ connectToDatabase();
 
 app.use(express.json());
 app.use(session(sessionConfig));
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:8080',
+  credentials: true,
+}));
 app.use(router)
 app.listen(3000, () => {
   console.log('Servidor rodando na porta 3000');

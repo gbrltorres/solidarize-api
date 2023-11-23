@@ -2,6 +2,7 @@ import ngoRepository from '../repositories/ngoRepository.js';
 import userRepository from '../repositories/userRepository.js';
 import ngoValidationSchema from './validators/ngoValidator.js';
 import { cnpj } from 'cpf-cnpj-validator';
+import logger from '../config/logger.js';
 
 export const createNgo = async (ngoData) => {
     try {
@@ -66,13 +67,18 @@ export const updateNgo = async (ngoData) => {
         if (!ngo) {
             return { message: 'ONG não encontrada.', status: 404 };
         }
+        
+        const ngoId = ngoData._id;
+        delete ngoData._id;
+        delete ngoData.__v;
 
-        const errorResponse = await validateNgoData(ngoData, ngoData.code);
+        const errorResponse = await validateNgoData(ngoData, ngoData.code, true);
         if (errorResponse) {
             return errorResponse;
         }
-        
-        await ngoRepository.update(ngoData);
+
+        await ngoRepository.update(ngoData, ngoId);
+        logger.info('ONG editada com sucesso.');
         return { message: 'ONG editada com sucesso.', status: 200 };
     } catch (ex) {
         return { message: ex.message, status: 502 };
@@ -93,8 +99,8 @@ export const deleteNgo = async (ngoCode) => {
     }
 };
 
-const validateNgoData = async (ngoData, currentCode = null) => {
-    if (!ngoData.email) {
+const validateNgoData = async (ngoData, currentCode = null, isUpdate = false) => {
+    if (!ngoData.email && !isUpdate) {
         return { message: 'O e-mail não foi fornecido.', status: 400 };
     }
 
@@ -104,7 +110,6 @@ const validateNgoData = async (ngoData, currentCode = null) => {
     if (error) {
         return { message: error.details.map(detail => detail.message).join(', '), status: 400 };
     }
-
     if (!cnpj.isValid(ngoData.code)) {
         return { message: 'O CNPJ fornecido não é válido.', status: 400 };
     }
