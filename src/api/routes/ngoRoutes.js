@@ -7,9 +7,9 @@ Ngo.post('/register', ngoController.createNgo)
 
 Ngo.get('/check-ngo-cnpj', ngoController.checkNgoByCnpj)
 
-Ngo.get('/check-ngo-phone', ngoController.checkNgoByPhoneNumber)
+Ngo.get('/check-ngo-id', ngoController.checkNgoById)
 
-Ngo.put('/update', ngoController.updateNgo)
+Ngo.get('/check-ngo-phone', ngoController.checkNgoByPhoneNumber)
 
 Ngo.delete('/delete', ngoController.deleteNgo)
 

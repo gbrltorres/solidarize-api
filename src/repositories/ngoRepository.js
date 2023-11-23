@@ -1,4 +1,5 @@
 import { Ngo } from "../models/Ngo.js";
+import { ObjectId } from "mongodb";
 
 const create = async (ngoData) => {
     const ngo = new Ngo(ngoData);
@@ -8,6 +9,10 @@ const create = async (ngoData) => {
 
 const findByCode = async (ngoCode) => {
     return await Ngo.findOne({ code: ngoCode });
+};
+
+const findById = async (ngoId) => {
+    return await Ngo.findOne({ _id: new ObjectId(ngoId) });
 };
 
 const findByPhoneNumber = async (phoneNumber) => {
@@ -30,6 +35,7 @@ const remove = async (ngoCode) => {
 export default {
     create,
     findByCode,
+    findById,
     findByPhoneNumber,
     update,
     remove

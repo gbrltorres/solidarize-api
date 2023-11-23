@@ -12,6 +12,12 @@ export const checkNgoByCnpj = async (req, res) => {
     res.status(response.status).json({ message: response.message });
 }
 
+export const checkNgoById = async (req, res) => {
+    const ngoData = req.query;
+    const response = await ngoService.checkNgoById(ngoData);
+    res.status(response.status).json({ message: response.message });
+}
+
 export const checkNgoByPhoneNumber = async (req, res) => {
     const ngoData = req.query;
     const response = await ngoService.checkNgoByPhoneNumber(ngoData);

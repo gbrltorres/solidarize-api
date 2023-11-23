@@ -33,6 +33,20 @@ export const checkNgoByCnpj = async (ngoData) => {
     }
 };
 
+export const checkNgoById = async (ngoData) => {
+    try {
+        const ngoId = ngoData.id;
+        const ngo = await ngoRepository.findById(ngoId);
+        if (ngo) {
+            return { message: 'ONG encontrada.', status: 200 };
+        } else {
+            return { message: 'ONG não encontrada.', status: 404 };
+        }
+    } catch (ex) {
+        return { message: ex.message, status: 502 };
+    }
+};
+
 export const checkNgoByPhoneNumber = async (ngoData) => {
     try {
         const ngo = await ngoRepository.findByPhoneNumber(ngoData.phoneNumber);
@@ -108,5 +122,6 @@ const validateNgoData = async (ngoData, currentCode = null) => {
 
 export default {
     createNgo,
-    updateNgo
+    updateNgo,
+    checkNgoById,
 };

@@ -23,7 +23,7 @@ export const checkUser = async (userData) => {
     try {
         const user = await userRepository.findByEmail(userData.email);
         if (user) {
-            return { message: 'Usuário encontrado.', status: 200 };
+            return { message: 'Usuário encontrado.', status: 200, user: user };
         } else {
             return { message: 'Usuário não encontrado.', status: 404 };
         }
