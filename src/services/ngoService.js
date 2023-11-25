@@ -65,11 +65,13 @@ export const updateNgo = async (ngoData) => {
     try {
         const ngo = await ngoRepository.findByCode(ngoData.code);
         if (!ngo) {
+            logger.error('ONG não encontrada');
             return { message: 'ONG não encontrada.', status: 404 };
         }
 
         const errorResponse = await validateNgoData(ngoData, ngoData.code, true);
         if (errorResponse) {
+            logger.error(errorResponse);
             return errorResponse;
         }
         
@@ -77,6 +79,7 @@ export const updateNgo = async (ngoData) => {
         logger.info('ONG editada com sucesso.');
         return { message: 'ONG editada com sucesso.', status: 200 };
     } catch (ex) {
+        logger.error(ex.message);
         return { message: ex.message, status: 502 };
     }
 };
@@ -85,12 +88,15 @@ export const deleteNgo = async (ngoCode) => {
     try {
         const ngo = await ngoRepository.findByCode(ngoCode);
         if (!ngo) {
+            logger.error('ONG não encontrada.')
             return { message: 'ONG não encontrada.', status: 404 };
         }
 
         await ngoRepository.remove(ngoCode);
+        logger.info('ONG removida com sucesso.')
         return { message: 'ONG removida com sucesso.', status: 200 };
     } catch (ex) {
+        logger.error(ex.message);
         return { message: ex.message, status: 502 };
     }
 };
