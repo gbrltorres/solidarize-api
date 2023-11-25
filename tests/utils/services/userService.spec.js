@@ -2,7 +2,6 @@ import bcrypt from 'bcrypt';
 import { createUser, checkUser } from '../../../src/services/userService';
 import userRepository from '../../../src/repositories/userRepository';
 import userValidationSchema from '../../../src/services/validators/userValidator';
-import logger from '../../../src/config/logger';
 
 jest.mock('bcrypt');
 jest.mock('../../../src/repositories/userRepository');
