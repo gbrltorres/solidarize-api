@@ -36,7 +36,7 @@ export const login = async (requestData) => {
         return { message: 'Login realizado com sucesso.', status: 200, token: token };
     } catch (error) {
         logger.error(error);
-        return { message: error, status: 500 };
+        return { message: error.message, status: 500 };
     }
 };
 

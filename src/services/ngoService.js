@@ -129,6 +129,9 @@ const validateNgoData = async (ngoData, currentCode = null, isUpdate = false) =>
 
 export default {
     createNgo,
-    updateNgo,
+    checkNgoByCnpj,
     checkNgoById,
+    checkNgoByPhoneNumber,
+    updateNgo,
+    deleteNgo 
 };
