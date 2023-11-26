@@ -7,6 +7,16 @@ const create = async (ngoData) => {
     return ngo;
 };
 
+const findByInterest = async (filter, page, pageSize) => {
+    return await Ngo.find(filter)
+        .skip((page - 1) * pageSize)
+        .limit(pageSize);
+};
+
+const countDocuments = async (filter) => {
+    return await Ngo.countDocuments(filter);
+};
+
 const findByCode = async (ngoCode) => {
     return await Ngo.findOne({ code: ngoCode });
 };
@@ -34,6 +44,8 @@ const remove = async (ngoCode) => {
 
 export default {
     create,
+    countDocuments,
+    findByInterest,
     findByCode,
     findById,
     findByPhoneNumber,

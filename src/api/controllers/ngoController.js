@@ -6,6 +6,12 @@ export const createNgo = async (req, res) => {
     res.status(response.status).json({ message: response.message });
 }
 
+export const listByCategory = async (req, res) => {
+    const ngoData = req.query;
+    const response = await ngoService.listByCategory(ngoData);
+    res.status(response.status).json({ message: response.message, ngos: response.ngos });
+}
+
 export const checkNgoByCnpj = async (req, res) => {
     const ngoData = req.query;
     const response = await ngoService.checkNgoByCnpj(ngoData);
