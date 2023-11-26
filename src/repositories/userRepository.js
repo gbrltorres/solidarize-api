@@ -16,8 +16,14 @@ const updateUserNgo = async (userEmail, ngo) => {
     await User.findOneAndUpdate(query, update, { new: true });
 };
 
+const remove = async (userEmail) => {
+    const query = { email: userEmail };
+    await User.findOneAndDelete(query);
+};
+
 export default {
     create,
     findByEmail,
-    updateUserNgo
+    updateUserNgo,
+    remove
 };

@@ -5,13 +5,17 @@ import { cnpj } from 'cpf-cnpj-validator';
 import logger from '../config/logger.js';
 
 export const createNgo = async (ngoData) => {
+    let userEmail;
     try {
-        const userEmail = ngoData.email;
+        userEmail = ngoData.email;
         const errorResponse = await validateNgoData(ngoData);
         if (errorResponse) {
+            await userRepository.remove(userEmail);
+            
             logger.info('[ngoService:createNgo] ' + errorResponse.message);
             return errorResponse;
         }
+        logger.info('DEPOIS DA VALIDAÇÃO');
 
         const ngo = await ngoRepository.create(ngoData);
         await userRepository.updateUserNgo(userEmail, ngo);
@@ -19,6 +23,8 @@ export const createNgo = async (ngoData) => {
         logger.info('[ngoService:createNgo] ONG cadastrada com sucesso.');
         return { message: 'ONG cadastrada com sucesso.', status: 200 };
     } catch (ex) {
+        await userRepository.remove(userEmail);
+
         logger.error('[ngoService:createNgo] ' + ex.message);
         return { message: ex.message, status: 502 };
     }

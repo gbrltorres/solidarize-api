@@ -1,2 +1,4 @@
 {"level":"error","message":"Nenhum cadastro foi encontrado com o e-mail fornecido."}
 {"level":"error","message":"Nenhum cadastro foi encontrado com o e-mail fornecido."}
+{"level":"error","message":"O e-mail fornecido já está em uso.","status":400}
+{"level":"error","message":"O e-mail fornecido já está em uso.","status":400}

@@ -21,4 +21,8 @@ export const Ngo = mongoose.model('ngo', new mongoose.Schema({
         type: Array,
         required: true
     },
+    image: {
+        type: String,
+        required: false
+    },
 }))

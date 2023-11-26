@@ -110,3 +110,305 @@
 {"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
 {"level":"info","message":"[ngoService:createNgo] [object Object]"}
 {"level":"info","message":"[ngoService:createNgo] O e-mail não foi fornecido."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:createNgo] O e-mail não foi fornecido."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:checkNgoByCnpj] ONG não encontrada."}
+{"level":"info","message":"[ngoService:checkNgoByPhoneNumber] ONGk não encontrada."}
+{"level":"info","message":"Usuário criado com sucesso."}
+{"level":"info","message":"[ngoService:createNgo] ONG cadastrada com sucesso."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:checkNgoByCnpj] ONG não encontrada."}
+{"level":"info","message":"[ngoService:checkNgoByPhoneNumber] ONGk não encontrada."}
+{"level":"info","message":"Usuário criado com sucesso."}
+{"level":"info","message":"[ngoService:createNgo] ONG cadastrada com sucesso."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:checkNgoByCnpj] ONG não encontrada."}
+{"level":"info","message":"[ngoService:checkNgoByPhoneNumber] ONGk não encontrada."}
+{"level":"info","message":"Usuário criado com sucesso."}
+{"level":"info","message":"[ngoService:createNgo] ONG cadastrada com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:checkNgoByCnpj] ONG não encontrada."}
+{"level":"info","message":"[ngoService:checkNgoByPhoneNumber] ONGk não encontrada."}
+{"level":"info","message":"Usuário criado com sucesso."}
+{"level":"info","message":"[ngoService:createNgo] ONG cadastrada com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:checkNgoByCnpj] ONG não encontrada."}
+{"level":"info","message":"[ngoService:checkNgoByPhoneNumber] ONGk não encontrada."}
+{"level":"info","message":"Usuário criado com sucesso."}
+{"level":"info","message":"[ngoService:createNgo] \"image\" is not allowed"}
+{"level":"info","message":"[ngoService:checkNgoByCnpj] ONG não encontrada."}
+{"level":"info","message":"[ngoService:checkNgoByPhoneNumber] ONGk não encontrada."}
+{"level":"error","message":"O e-mail fornecido já está em uso.","status":400}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:checkNgoByCnpj] ONG não encontrada."}
+{"level":"info","message":"[ngoService:checkNgoByPhoneNumber] ONGk não encontrada."}
+{"level":"info","message":"Usuário criado com sucesso."}
+{"level":"info","message":"[ngoService:createNgo] \"image\" is not allowed"}
+{"level":"info","message":"[ngoService:checkNgoByCnpj] ONG não encontrada."}
+{"level":"info","message":"[ngoService:checkNgoByPhoneNumber] ONGk não encontrada."}
+{"level":"error","message":"O e-mail fornecido já está em uso.","status":400}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:checkNgoByCnpj] ONG não encontrada."}
+{"level":"info","message":"[ngoService:checkNgoByPhoneNumber] ONGk não encontrada."}
+{"level":"info","message":"Usuário criado com sucesso."}
+{"level":"info","message":"[ngoService:createNgo] \"image\" is not allowed"}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:checkNgoByCnpj] ONG não encontrada."}
+{"level":"info","message":"[ngoService:checkNgoByPhoneNumber] ONGk não encontrada."}
+{"level":"info","message":"Usuário criado com sucesso."}
+{"level":"info","message":"[ngoService:createNgo] \"image\" is not allowed"}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:checkNgoByCnpj] ONG não encontrada."}
+{"level":"info","message":"[ngoService:checkNgoByPhoneNumber] ONGk não encontrada."}
+{"level":"info","message":"Usuário criado com sucesso."}
+{"level":"info","message":"[ngoService:createNgo] \"image\" is not allowed"}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:checkNgoByCnpj] ONG não encontrada."}
+{"level":"info","message":"[ngoService:checkNgoByPhoneNumber] ONGk não encontrada."}
+{"level":"info","message":"Usuário criado com sucesso."}
+{"level":"info","message":"ANTES DA VALIDAÇÃO"}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:checkNgoByCnpj] ONG não encontrada."}
+{"level":"info","message":"[ngoService:checkNgoByPhoneNumber] ONGk não encontrada."}
+{"level":"info","message":"Usuário criado com sucesso."}
+{"level":"info","message":"ANTES DA VALIDAÇÃO"}
+{"level":"info","message":"[ngoService:createNgo] \"image\" is not allowed"}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:checkNgoByCnpj] ONG não encontrada."}
+{"level":"info","message":"[ngoService:checkNgoByPhoneNumber] ONGk não encontrada."}
+{"level":"info","message":"Usuário criado com sucesso."}
+{"level":"info","message":"ANTES DA VALIDAÇÃO"}
+{"level":"info","message":"[ngoService:createNgo] \"image\" is not allowed"}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:checkNgoByCnpj] ONG não encontrada."}
+{"level":"info","message":"[ngoService:checkNgoByPhoneNumber] ONGk não encontrada."}
+{"level":"info","message":"Usuário criado com sucesso."}
+{"level":"info","message":"DEPOIS DA VALIDAÇÃO"}
+{"level":"info","message":"[ngoService:createNgo] ONG cadastrada com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG não encontrada."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG não encontrada."}
+{"level":"info","message":"Usuário não encontrado."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"[ngoService:updateNgo] ONG editada com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"[ngoService:updateNgo] ONG editada com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"Login realizado com sucesso."}
+{"level":"info","message":"Usuário encontrado."}
+{"level":"info","message":"[ngoService:checkNgoById] ONG encontrada."}
+{"level":"info","message":"[ngoService:listByCategory] ONGs encontradas."}

@@ -7,7 +7,8 @@ const ngoValidationSchema = Joi.object({
     code: Joi.string().required(),
     phoneNumber: Joi.string().pattern(phoneNumberRegex).required(),
     description: Joi.string().required(),
-    interests: Joi.array().required()
+    interests: Joi.array().required(),
+    image: Joi.string()
 });
 
 export default ngoValidationSchema;
